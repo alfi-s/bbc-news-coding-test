@@ -1,0 +1,23 @@
+{
+  "name": "bbc-news-coding-test",
+  "version": "1.0.0",
+  "description": "Article Ranker for the BBC News Coding Test",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfi-s/bbc-news-coding-test.git"
+  },
+  "author": "Alfi Sumadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfi-s/bbc-news-coding-test/issues"
+  },
+  "homepage": "https://github.com/alfi-s/bbc-news-coding-test#readme"
+}
