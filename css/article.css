@@ -1,0 +1,29 @@
+/* The style for article pages */
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        "nav nav nav",
+        ". main .",
+        "foot foot foot"
+}
+
+.nav {
+    grid-area: "nav";
+    background-color: blue;
+}
+
+.content {
+    grid-area: "main";
+    padding-left: 15em;
+    padding-right: 15em;
+    margin-bottom: 1em;
+}
+
+.footer {
+    grid-area: "foot";
+    background-color: salmon;
+}
