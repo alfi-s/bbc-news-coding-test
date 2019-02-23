@@ -25,6 +25,13 @@ body {
     font-size: 3rem;
 }
 
+.content {
+    padding-left: 15em;
+    padding-right: 15em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .site-title {
     color: white;
     font-family: 'Patua One', cursive;

@@ -8,16 +8,28 @@ let listOfArticles = [
 ]
 
 function rankingComponent(articles) {
-    let contentToAdd = $("<ul></ul>").sortable()
+    let contentToAdd = $("<ol></ol>").sortable({
+        axis: 'y',
+        placeholder: "rank-item-placeholder",
+        start: (event, ui) => {
+            ui.item.toggleClass("rank-item-placeholder");
+        },
+        stop: (event, ui) => {
+            ui.item.toggleClass("rank-item-placeholder");
+        }
+      });
     for(let article of articles)
-        contentToAdd.append($("<li></li>").text(article).attr("id", article));
+        contentToAdd.append($("<li></li>")
+            .text(article)
+            .attr("id", article)
+            .attr("class", "rank-item"));
     return contentToAdd;
 }
 
 $(document).ready(() => {
     contentToAdd = rankingComponent(listOfArticles);
-    $(contentClass).append(contentToAdd);
+    $(rankingClass).append(contentToAdd);
     $(submitTag).click(() => {
-        //console.log(contentToAdd.sortable('toArray').toString()); 
+        console.log(contentToAdd.sortable('toArray')); 
     });
 });

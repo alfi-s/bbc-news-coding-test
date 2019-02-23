@@ -1,0 +1,58 @@
+/* The style for the ranking page */
+
+.content {
+    font-family: "PT Sans", sans-serif;
+}
+
+#information {
+    text-align: center;
+    line-height: 1.1rem;
+    padding-top: .5em;
+    margin-bottom: 0.4em;
+}
+
+#information p {
+    font-size: 0.9rem;
+}
+
+.ranking {
+    display: block;
+    background-color:#c23616;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 1.5em 1.5em 1.5em 1em;
+}
+
+.rank-item {
+    background-color: #661a08;
+    color:white;
+    font-size: 1.2em;
+    margin: 0.2em;
+    padding: 0.4em;
+}
+
+.rank-item-placeholder {
+    background-color: #66190867;
+    color: white;
+    list-style: normal;
+    height: 3em;
+}
+
+#submit {
+    background-color: #e84118;
+    border: none;
+    color: white;
+    padding: 1.6rem 3.2rem;
+    display: block;
+    margin: 1.2em auto;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #e6765d;
+    height:150%;
+}
