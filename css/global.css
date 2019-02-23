@@ -1,5 +1,5 @@
 /* Custom Fonts */
-@import url("https://fonts.googleapis.com/css?family=Passion+One");
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
 
 /* Style that applies to all pages. */
@@ -22,7 +22,7 @@ body {
 
 .site-title {
     color: white;
-    font-family: 'Passion One';
+    font-family: 'Patua One', cursive;
 }  
 
 .footer {
