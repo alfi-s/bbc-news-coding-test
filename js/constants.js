@@ -1,6 +1,7 @@
 /* Common tags to reference in the site. */
 const titleTag   = '#title';
 const articleTag = '#article';
+const submitTag  = '#submit';
 
 /* Comon classes to reference in the site. */
 const navbarClass     = '.nav';

@@ -33,9 +33,12 @@ class Article {
             case "heading":
                 // If the heading and the title match, dont render the heading
                 if (model.text == this.title) 
-                    contentToAdd = $("<h1></h1>").text(model.text);
+                    contentToAdd = $("<h1></h1>")
+                        .text(model.text)
+                        .add($("<hr>"));
                 else
                     contentToAdd = $("<h1></h1>").text(this.title)
+                        .add($("<hr>"))
                         .add($("<h3></h3>").text(model.text));
                 break;
 
