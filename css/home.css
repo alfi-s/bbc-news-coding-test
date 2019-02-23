@@ -22,6 +22,7 @@ body, html {
 #title-content {
     z-index: 3;
     position:absolute;
+    display: none;
     top:50%;
     left:0;
     width:100%;

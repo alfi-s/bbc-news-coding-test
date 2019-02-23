@@ -13,6 +13,13 @@
 
         <link rel="stylesheet" href="../css/global.css">
         <link rel="stylesheet" href="../css/article.css">
+
+        <script src="../js/constants.js"></script>
+        <script src="../js/Article.js"></script>
+        <script>
+            $(document).ready(() => { ((new Article(article2)).render()); })
+        </script>
+
     </head>
 
     <body>
@@ -28,11 +35,5 @@
             <div class='footer'>Articles. (2019)</div>
         </div>
     </body>
-
-    <script src="../js/constants.js"></script>
-    <script src="../js/Article.js"></script>
-    <script>
-        $(document).ready(() => { ((new Article(article2)).render()); })
-    </script>
 
 </html>
