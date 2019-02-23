@@ -7,9 +7,17 @@ let listOfArticles = [
     "Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu"
 ]
 
-function renderRankings(articles) {
-    let contentToAdd = $("<ul></ul>")
-    for(let article in articles)
-        contentToAdd.append($("<li></li>").text(article));
-    $("#content").append(contentToAdd);
+function rankingComponent(articles) {
+    let contentToAdd = $("<ul></ul>").sortable()
+    for(let article of articles)
+        contentToAdd.append($("<li></li>").text(article).attr("id", article));
+    return contentToAdd;
 }
+
+$(document).ready(() => {
+    contentToAdd = rankingComponent(listOfArticles);
+    $("#content").append(contentToAdd);
+    $("#submit").click(() => {
+        //console.log(contentToAdd.sortable('toArray').toString()); 
+    });
+});
