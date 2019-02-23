@@ -28,7 +28,11 @@ class Article {
 
         switch(type) {
             case "heading":
-                contentToAdd = $("<h3></h3>").text(model.text);
+                if (model.text == this.title) 
+                    contentToAdd = $("<h1></h1>").text(model.text);
+                else
+                    contentToAdd = $("<h1></h1>").text(this.title)
+                        .add($("<h3></h3>").text(model.text));
                 break;
             case "paragraph":
                 contentToAdd = $("<p></p>").text(model.text);
