@@ -18,6 +18,7 @@ class Article {
         $(titleTag).append(this.title);
         for(let content of this.toRender)
             $(articleTag).append(content);
+        $(articleTag).append($("<hr>"));
     }
 
     // Parses the body and generates the html for the content.
