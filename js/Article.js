@@ -31,6 +31,7 @@ class Article {
         // The format of what's added depends on the type
         switch(type) {
             case "heading":
+                // If the heading and the title match, dont render the heading
                 if (model.text == this.title) 
                     contentToAdd = $("<h1></h1>").text(model.text);
                 else
