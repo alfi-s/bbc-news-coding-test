@@ -1,0 +1,53 @@
+/* The style for the home page */
+
+body, html {
+    height:100%;
+}
+
+.header {
+    z-index: -1;
+    height: 100%;
+    background-image: url('../res/title-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #7a372898;
+}
+
+#title-content {
+    z-index: 3;
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+button {
+    background-color: #cf2121;
+    border: none;
+    color: white;
+    padding: 1.6rem 3.2rem;
+    display: block;
+    margin: 1.2em auto;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #741616;
+    height:150%;
+}
+
+.site-title {
+    font-size: 4em;
+}
