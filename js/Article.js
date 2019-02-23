@@ -15,9 +15,9 @@ class Article {
 
     // Renders the JSON as an article.
     render() {
-        $("#title").append(this.title);
+        $(titleTag).append(this.title);
         for(let content of this.toRender)
-            $("#content").append(content);
+            $(articleTag).append(content);
     }
 
     // Parses the body and generates the html for the content.

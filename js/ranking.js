@@ -16,8 +16,8 @@ function rankingComponent(articles) {
 
 $(document).ready(() => {
     contentToAdd = rankingComponent(listOfArticles);
-    $("#content").append(contentToAdd);
-    $("#submit").click(() => {
+    $(contentClass).append(contentToAdd);
+    $(submitTag).click(() => {
         //console.log(contentToAdd.sortable('toArray').toString()); 
     });
 });
