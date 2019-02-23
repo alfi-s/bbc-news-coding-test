@@ -24,8 +24,11 @@ class Article {
     setBody(bodyElement) {
         const type  = bodyElement.type;
         const model = bodyElement.model;
+
+        // Variable to be returned
         let contentToAdd = null;
 
+        // The format of what's added depends on the type
         switch(type) {
             case "heading":
                 if (model.text == this.title) 
@@ -34,9 +37,11 @@ class Article {
                     contentToAdd = $("<h1></h1>").text(this.title)
                         .add($("<h3></h3>").text(model.text));
                 break;
+
             case "paragraph":
                 contentToAdd = $("<p></p>").text(model.text);
                 break;
+
             case "image":
                 contentToAdd = $("<img>").attr({
                     src: model.url,
@@ -45,6 +50,7 @@ class Article {
                     weight: model.weight
                 });
                 break;
+
             case "list":
                 // Determine first the type of the list being dealt with
                 const listType = (model.type == "unordered") ? "<ul></ul>" : "<ol></ol>"
