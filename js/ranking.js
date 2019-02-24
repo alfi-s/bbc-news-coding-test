@@ -10,6 +10,7 @@ let listOfArticles = [
 function rankingComponent(articles) {
     let contentToAdd = $("<ol></ol>").sortable({
         axis: 'y',
+        cursor: 'move',
         placeholder: "rank-item-placeholder",
         start: (event, ui) => {
             ui.item.toggleClass("rank-item-placeholder");

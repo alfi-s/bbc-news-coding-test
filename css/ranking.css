@@ -38,6 +38,7 @@
 
 .rank-item:hover {
     cursor: grab;
+    background-color:#722716;
 }
 
 .rank-item-placeholder {
