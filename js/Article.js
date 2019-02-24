@@ -1,6 +1,6 @@
-/*
- * This is a class that represents the html of an article
- * based on a given JSON input.
+/**
+ * Class that represents an article and renders it based on received
+ * JSON data.
  */
 class Article {
 

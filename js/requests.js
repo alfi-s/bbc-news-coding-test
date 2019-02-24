@@ -2,6 +2,7 @@
 /**
  * A function that simulates a fluctuating network by randomly sleeping
  * @param {int} maxSleep - the maximum sleep time
+ * @param {int} timeout  - the time it takes to timeout
  */
 function simulateFluctuatingNetwork(maxSleep, timeout) {
     let sleep = Math.random() * maxSleep;
@@ -28,7 +29,11 @@ function simulateFluctuatingNetwork(maxSleep, timeout) {
     })
 }
 
-
+/**
+ * Function which gets the article data from the server.
+ * @param {string} endpoint - Endpoint to get the data
+ * @param {function} callback - function which triggers when the data is received
+ */
 async function getData(endpoint, callback) {
     /* In practice this would be a HTTP GET request:
      *     

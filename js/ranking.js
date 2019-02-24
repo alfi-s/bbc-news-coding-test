@@ -31,20 +31,26 @@ $(document).ready(() => {
     contentToAdd = rankingComponent(listOfArticles);
     $(rankingClass).append(contentToAdd);
     $(submitTag).click(() => {
-
+        $(submitTag).text("Sending...");
+        $(".timeout").remove();
         //In practice, this will send a POST request to the server.
         sendRankings( 
             '/send', // endpoint to be used in practice
             contentToAdd.sortable('toArray'), // Send array of articles ranked.
             response => {
-                $("#submit").replaceWith(
+                $(submitTag).replaceWith(
                     $("<p></p>")
                         .text("Thank you for your feedback.")
-                        .addClass("thank-you"));
+                        .addClass("message"));
                 console.log('rankings sent');
                 console.log(response);
             },
             error => {
+                $(submitTag).text("Submit");
+                $('.content').append($("<p></p>")
+                    .text('Timeout has occured, try again later.')
+                    .addClass("message")
+                    .addClass("timeout"));
                 console.log(error);
             });
     });
