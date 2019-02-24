@@ -75,3 +75,7 @@ class Article {
         return contentToAdd;
     }
 }
+
+module.exports = {
+    article: Article
+}

@@ -4,7 +4,9 @@
   "description": "Article Ranker for the BBC News Coding Test",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
