@@ -21,6 +21,12 @@
         
         $(document).ready(() => {
             $("#title-content").fadeIn(1000);
+            $("body").mousemove( e => {
+                let x = (($(window).width() / 2)  - e.pageX) * 0.05;
+                let y = (($(window).height() / 2) - e.pageY) * 0.05;
+                $('.bg').css('margin-left', x + 'px');
+                $('.bg').css('margin-top' , y + 'px');
+            });
         });
 
         </script>
@@ -28,6 +34,7 @@
     <body>
         <div class="header">
             <div class="bg"></div>
+            <div class="overlay"></div>
             <div id="title-content">
                 <span class="site-title">Articles.</span>
                 <h2 class="sub-title">Your personal reading space.</h2>
