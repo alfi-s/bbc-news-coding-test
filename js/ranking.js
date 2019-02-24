@@ -23,20 +23,30 @@ function rankingComponent(articles) {
         contentToAdd.append($("<li></li>")
             .text(article)
             .attr("id", article)
-            .attr("class", "rank-item"));
+            .addClass("rank-item"));
     return contentToAdd;
 }
 
-function sendRankings(rankings, callback) {
-    $.ajax({
-        url:'/rank', //some endpoint that will receive the rankings
-        type: 'POST',
-        data: rankings,
-        dataType: 'json',
-        success: data => {
-            callback(null, data)
-        }
-    })
+async function sendRankings(endpoint, articleRankings, callback) {
+    /* In practice this would be a HTTP POST request:
+     *     
+     *  try {
+     *      const response = await fetch(endpoint, {
+     *          method: 'POST',
+     *          body: JSON.stringify({rankings: articleRankings})
+     *      });
+     *  
+     *      if (response.ok) {
+     *           const json = await response.json();
+     *           callback(json);
+     *       }
+     *      throw new Error('Failed to POST: ' + endpoint);
+     *  } catch (err) {
+     *      console.log(err);
+     *  }
+     */
+
+     callback(JSON.stringify({rankings: articleRankings})); // For now assume it was sent.
 }
 
 $(document).ready(() => {
@@ -44,12 +54,18 @@ $(document).ready(() => {
     $(rankingClass).append(contentToAdd);
     $(submitTag).click(() => {
 
-        let stub = sinon.stub($, 'ajax');
-
         //In practice, this will send a POST request to the server.
-        sendRankings(
-            {rankings: contentToAdd.sortable('toArray')}, // Send array of articles ranked.
-            (err, data) => {console.log(data)}); // Callback function.
+        sendRankings( 
+            '/send', // endpoint to be used in practice
+            contentToAdd.sortable('toArray'), // Send array of articles ranked.
+            response => {
+                $("#submit").replaceWith(
+                    $("<p></p>")
+                        .text("Thank you for your feedback.")
+                        .addClass("thank-you"));
+                console.log('rankings sent to ' + endpoint);
+                console.log(response);
+            }); // Callback function.
 
         console.log(contentToAdd.sortable('toArray')); 
     });

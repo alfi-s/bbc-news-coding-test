@@ -48,6 +48,12 @@
     height: 3em;
 }
 
+.thank-you {
+    text-align: center;
+    color: rgb(66, 66, 66);
+    font-style: italic;
+}
+
 #submit {
     background-color: #e84118;
     border: none;
