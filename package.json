@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Article Ranker for the BBC News Coding Test",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "sinon": "^7.2.4"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

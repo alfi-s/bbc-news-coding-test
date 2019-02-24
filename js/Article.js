@@ -68,3 +68,14 @@ class Article {
         return contentToAdd;
     }
 }
+
+/* Stub of an GET request that gets the JSON representation of an article. */
+function getArticleData(article, callback) {
+    $.ajax({
+        url: '/data/' + article, 
+        type: 'GET',
+        success: data => {
+            callback(data)
+        }
+    });
+}

@@ -16,8 +16,20 @@
 
         <script src="../js/constants.js"></script>
         <script src="../js/Article.js"></script>
+        <script src="../node_modules/sinon/pkg/sinon.js"></script>
         <script>
-            $(document).ready(() => { ((new Article(article4)).render()); })
+            
+            $(document).ready(() => {
+
+                let stub = sinon.stub($, 'ajax'); // to stub the ajax call
+                let json;
+                // In practice, this will send a GET request to the server
+                getArticleData('article-4.json', (err, data) => {json = data} );
+
+                //In practice will be: (new Article(json)).render()
+                (new Article(article4)).render();
+            });
+
         </script>
     </head>
 
