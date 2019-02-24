@@ -17,14 +17,6 @@ body {
     grid-template-rows: 3;
 }
 
-.nav {
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    padding-left: 3em;
-    background-color: #c23616;
-    font-size: 3rem;
-}
-
 .content {
     padding-left: 15em;
     padding-right: 15em;

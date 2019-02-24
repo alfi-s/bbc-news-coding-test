@@ -4,6 +4,10 @@
     font-family: "PT Sans", sans-serif;
 }
 
+.site-title {
+    font-size: 3em;
+}
+
 #information {
     text-align: center;
     line-height: 1.1rem;
@@ -30,6 +34,10 @@
     font-size: 1.2em;
     margin: 0.2em;
     padding: 0.4em;
+}
+
+.rank-item:hover {
+    cursor: grab;
 }
 
 .rank-item-placeholder {

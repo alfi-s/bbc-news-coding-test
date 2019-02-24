@@ -6,6 +6,10 @@
     grid-template-columns: 2;
 }
 
+.site-title {
+    font-size: 3em;
+}
+
 #article {
     grid-row: 1;
     grid-column: 1 / span 2;

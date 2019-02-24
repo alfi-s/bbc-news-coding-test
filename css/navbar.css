@@ -1,0 +1,32 @@
+/* Styles for pages with a navbar. */
+
+.site-title {
+    font-size: 3em;
+}
+
+.nav {
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+    padding-left: 3em;
+    background-color: #c23616;
+    overflow: hidden;
+}
+
+.nav-items {
+    float: right;
+    color: white;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.2em;
+    padding: 1em 3em;
+}
+
+.nav-item {
+    color: inherit;
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.nav-item:hover {
+    color: black;
+}
