@@ -69,13 +69,20 @@ class Article {
     }
 }
 
-/* Stub of an GET request that gets the JSON representation of an article. */
-function getArticleData(article, callback) {
-    $.ajax({
-        url: '/data/' + article, 
-        type: 'GET',
-        success: data => {
-            callback(null, data)
-        }
-    });
+async function getData(endpoint, callback) {
+    /* In practice this would be a HTTP GET request:
+     *     
+     *  try {
+     *      const response = await fetch(endpoint);
+     *      if (response.ok) {
+     *           const json = await response.json();
+     *           callback(json);
+     *       }
+     *      throw new Error('Failed to GET: ' + endpoint);
+     *  } catch (err) {
+     *      console.log(err);
+     *  }
+    */
+
+    callback(endpoint); // Right now we consider the data already loaded.
 }
