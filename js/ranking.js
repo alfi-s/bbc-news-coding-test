@@ -63,7 +63,7 @@ $(document).ready(() => {
                     $("<p></p>")
                         .text("Thank you for your feedback.")
                         .addClass("thank-you"));
-                console.log('rankings sent to ' + endpoint);
+                console.log('rankings sent');
                 console.log(response);
             }); // Callback function.
 
