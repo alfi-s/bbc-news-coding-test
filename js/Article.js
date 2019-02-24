@@ -52,8 +52,15 @@ class Article {
                     src: model.url,
                     alt: model.altText,
                     height: model.height,
-                    weight: model.weight
-                });
+                    width: model.width,
+                }).css({
+                    display: 'none'
+                }).add($('<div></div>')
+                    .addClass('placeholder')
+                    .css({
+                        height: model.height,
+                        width: model.width,
+                    }));
                 break;
 
             case "list":

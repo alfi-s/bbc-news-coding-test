@@ -19,7 +19,6 @@
         <script src="../js/Article.js"></script>
         <script type="text/javascript" src="../js/requests.js"></script>
         <script>
-            
             $(document).ready(() => {
                 let json;
                 // In reality we would pass in an endpoint to get article1
@@ -29,6 +28,10 @@
                 (new Article(json)).render();
             });
 
+            $(window).on('load', () => {
+                $(".placeholder").fadeOut(1000);
+                $("img").delay(900).fadeIn(1000);
+            });
         </script>
 
     </head>
@@ -43,6 +46,9 @@
                 </div>
             </nav>
             <div class='content'>
+                <!--div id='loading'>
+                    Loading Article...
+                </div-->
                 <div id='article'></div>
                 <a href="article-2.html" class="next">Next Article</a>
             </div>

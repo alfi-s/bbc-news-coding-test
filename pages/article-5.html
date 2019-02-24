@@ -29,6 +29,11 @@
                 (new Article(json)).render();
             });
 
+            $(window).on('load', () => {
+                $(".placeholder").fadeOut(1000);
+                $("img").delay(900).fadeIn(1000);
+            });
+
         </script>
     </head>
 

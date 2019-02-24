@@ -4,16 +4,25 @@
     display: grid;
     grid-template-rows: 2;
     grid-template-columns: 2;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .site-title {
     font-size: 3em;
 }
 
+#loading {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 5em;
+}
+
 #article {
     grid-row: 1;
     grid-column: 1 / span 2;
-    font-family: 'PT Sans', sans-serif;
     margin-bottom: 1em;
     text-align: justify;
 }
@@ -24,6 +33,14 @@
 }
 
 #article img {
+    display: block;
+    margin-bottom: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placeholder{
+    background-color: lightgrey;
     display: block;
     margin-bottom: 0.4rem;
     margin-left: auto;
