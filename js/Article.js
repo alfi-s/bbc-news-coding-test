@@ -82,7 +82,7 @@ async function getData(endpoint, callback) {
      *  } catch (err) {
      *      console.log(err);
      *  }
-    */
+     */
 
     callback(endpoint); // Right now we consider the data already loaded.
 }
