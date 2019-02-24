@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Class that represents an article and renders it based on received
  * JSON data.
@@ -6,6 +8,10 @@ class Article {
 
     // Preloads the data from the given JSON.
     constructor(data) {
+        this.initialise(data);
+    }
+
+    initialise(data) {
         this.title = data.title;
         this.toRender  = [];
 
@@ -76,6 +82,4 @@ class Article {
     }
 }
 
-module.exports = {
-    article: Article
-}
+module.exports = Article;

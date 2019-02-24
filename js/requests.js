@@ -1,3 +1,4 @@
+'use strict'
 
 /**
  * A function that simulates a fluctuating network by randomly sleeping
