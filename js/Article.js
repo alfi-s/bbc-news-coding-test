@@ -68,21 +68,3 @@ class Article {
         return contentToAdd;
     }
 }
-
-async function getData(endpoint, callback) {
-    /* In practice this would be a HTTP GET request:
-     *     
-     *  try {
-     *      const response = await fetch(endpoint);
-     *      if (response.ok) {
-     *           const json = await response.json();
-     *           callback(json);
-     *       }
-     *      throw new Error('Failed to GET: ' + endpoint);
-     *  } catch (err) {
-     *      console.log(err);
-     *  }
-     */
-
-    callback(endpoint); // Right now we consider the data already loaded.
-}

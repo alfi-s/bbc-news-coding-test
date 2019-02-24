@@ -27,28 +27,6 @@ function rankingComponent(articles) {
     return contentToAdd;
 }
 
-async function sendRankings(endpoint, articleRankings, callback) {
-    /* In practice this would be a HTTP POST request:
-     *     
-     *  try {
-     *      const response = await fetch(endpoint, {
-     *          method: 'POST',
-     *          body: JSON.stringify({rankings: articleRankings})
-     *      });
-     *  
-     *      if (response.ok) {
-     *           const json = await response.json();
-     *           callback(json);
-     *       }
-     *      throw new Error('Failed to POST: ' + endpoint);
-     *  } catch (err) {
-     *      console.log(err);
-     *  }
-     */
-
-     callback(JSON.stringify({rankings: articleRankings})); // For now assume it was sent.
-}
-
 $(document).ready(() => {
     contentToAdd = rankingComponent(listOfArticles);
     $(rankingClass).append(contentToAdd);
@@ -65,8 +43,9 @@ $(document).ready(() => {
                         .addClass("thank-you"));
                 console.log('rankings sent');
                 console.log(response);
-            }); // Callback function.
-
-        console.log(contentToAdd.sortable('toArray')); 
+            },
+            error => {
+                console.log(error);
+            });
     });
 });
