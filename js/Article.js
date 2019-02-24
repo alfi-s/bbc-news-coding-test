@@ -75,7 +75,7 @@ function getArticleData(article, callback) {
         url: '/data/' + article, 
         type: 'GET',
         success: data => {
-            callback(data)
+            callback(null, data)
         }
     });
 }
