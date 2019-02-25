@@ -1,6 +1,5 @@
 # BBC News Coding Test
 Code for web-based article ranker for the BBC News Coding test.
-<<<<<<< HEAD
 Hosted on [GitHub Pages.](https://alfi-s.github.io/bbc-news-coding-test/index.html)
 
 ## Overview
